@@ -4,6 +4,8 @@ Public Class frmMain
     Private filePath, selectedLogin As String
     Private configPath, gamePath As String
     Private signInEnabled As Boolean = False
+    Private videoStarted As Boolean = False
+    Private loginVolume As Integer = 50
     Private Sub frmMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'Configuration Load
         configPath = Application.StartupPath + "\config.cfg"
@@ -16,6 +18,8 @@ Public Class frmMain
 
         'Login Screen Media Loader  
         StartVideo()
+
+        signTimer.Start()
     End Sub
 
     Private Sub pbMinimize_MouseEnter(sender As Object, e As EventArgs) Handles pbMinimize.MouseEnter
@@ -58,11 +62,11 @@ Public Class frmMain
         Application.Exit()
     End Sub
 
-    Private Sub txtUser_TextChanged(sender As Object, e As EventArgs) Handles txtUser.TextChanged
+    Private Sub txtUser_TextChanged(sender As Object, e As EventArgs)
         ChangeSignIn()
     End Sub
 
-    Private Sub txtPass_TextChanged(sender As Object, e As EventArgs) Handles txtPass.TextChanged
+    Private Sub txtPass_TextChanged(sender As Object, e As EventArgs)
         ChangeSignIn()
     End Sub
 
@@ -71,15 +75,9 @@ Public Class frmMain
     End Sub
 
     Private Sub ChangeSignIn()
-        If txtUser.TextLength > 2 And txtPass.TextLength > 2 Then
-            pbSignIn.BackgroundImage = My.Resources.SignInEnabled
-            pbSignIn.Cursor = Cursors.Hand
-            signInEnabled = True
-        Else
-            pbSignIn.BackgroundImage = My.Resources.SignInDisabled
-            pbSignIn.Cursor = Cursors.Default
-            signInEnabled = False
-        End If
+        pbSignIn.BackgroundImage = My.Resources.SignInEnabled
+        pbSignIn.Cursor = Cursors.Hand
+        signInEnabled = True
     End Sub
 
     Private Sub SignIn()
@@ -96,6 +94,7 @@ Public Class frmMain
             Dim writer As StreamWriter = New StreamWriter(configPath)
             writer.WriteLine("Path=C:\Riot Games\Riot Client\RiotClientServices.exe")
             writer.WriteLine("LoginScreen=Current")
+            writer.WriteLine("Volume=50")
             writer.Close()
         End If
 
@@ -112,6 +111,11 @@ Public Class frmMain
         currentCfg = currentCfg.Replace("LoginScreen=", String.Empty)
         selectedLogin = currentCfg
 
+        'Get Volume
+        currentCfg = reader.ReadLine()
+        currentCfg = currentCfg.Replace("Volume=", String.Empty)
+        loginVolume = Integer.Parse(currentCfg)
+
         reader.Close()
     End Sub
 
@@ -127,6 +131,7 @@ Public Class frmMain
             Dim writer As StreamWriter = New StreamWriter(configPath)
             writer.WriteLine("Path=" + gamePath)
             writer.WriteLine("LoginScreen=" + selectedLogin)
+            writer.WriteLine("Volume=" + loginVolume.ToString())
             writer.Close()
         End If
 
@@ -138,8 +143,14 @@ Public Class frmMain
         lbPath.Visible = Visibility
         txtPath.Visible = Visibility
         pbPath.Visible = Visibility
+        lbVolume.Visible = Visibility
+        pbVolume.Visible = Visibility
+        numVolume.Visible = Visibility
+
+        'Set Values
         txtPath.Text = gamePath
         cbLogin.Text = selectedLogin
+        numVolume.Value = loginVolume
 
         If ModifyValues = True Then
             StartVideo()
@@ -157,8 +168,14 @@ Public Class frmMain
         'If Not File.Exists(filePath) Then
         'File.WriteAllBytes(filePath, My.Resources.Lillia)
         'End If
-        wmpLogin.URL = filePath
-        wmpLogin.Ctlcontrols.play()
+        wmpLogin.settings.volume = loginVolume
+
+        If filePath <> wmpLogin.URL Then
+            wmpLogin.URL = filePath
+            wmpLogin.Ctlcontrols.play()
+        End If
+
+        videoStarted = True
     End Sub
 
     Private Sub lblSignIn_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles lblSignIn.LinkClicked
@@ -169,23 +186,41 @@ Public Class frmMain
         Process.Start("https://signup.na.leagueoflegends.com/en/signup/index#/")
     End Sub
 
+    Private Sub frmMain_KeyDown(sender As Object, e As KeyEventArgs) Handles MyBase.KeyDown
+        If e.KeyCode = Keys.Enter Then
+            SignIn()
+        End If
+    End Sub
+
     Private Sub lblVaank_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles lblVaank.LinkClicked
         Process.Start("https://www.youtube.com/channel/UCkkTTVsztYaqPTcZAgnt0Xg")
+    End Sub
+
+    Private Sub numVolume_ValueChanged(sender As Object, e As EventArgs) Handles numVolume.ValueChanged
+        loginVolume = numVolume.Value
+        If videoStarted = True Then
+            wmpLogin.settings.volume = loginVolume
+        End If
+    End Sub
+
+    Private Sub LinkLabel1_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel1.LinkClicked
+        Process.Start("https://github.com/IgnacioRolon/LeagueLoginScreen/releases")
+    End Sub
+
+    Private Sub wmpLogin_PlayStateChange(sender As Object, e As AxWMPLib._WMPOCXEvents_PlayStateChangeEvent) Handles wmpLogin.PlayStateChange
+        If e.newState = 8 Then
+            wmpLogin.URL = filePath
+            wmpLogin.Ctlcontrols.play()
+        End If
+    End Sub
+
+    Private Sub signTimer_Tick(sender As Object, e As EventArgs) Handles signTimer.Tick
+        ChangeSignIn()
+        signTimer.Stop()
     End Sub
 
     Private Sub pbDone_Click(sender As Object, e As EventArgs) Handles pbDone.Click
         ChangeOptions(False, True)
     End Sub
 
-    Private Sub txtPass_KeyDown(sender As Object, e As KeyEventArgs) Handles txtPass.KeyDown
-        If e.KeyCode = Keys.Enter Then
-            SignIn()
-        End If
-    End Sub
-
-    Private Sub txtUser_KeyDown(sender As Object, e As KeyEventArgs) Handles txtUser.KeyDown
-        If e.KeyCode = Keys.Enter Then
-            SignIn()
-        End If
-    End Sub
 End Class

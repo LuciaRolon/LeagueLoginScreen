@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class frmMain
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,8 +20,9 @@ Partial Class frmMain
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmMain))
         Me.wmpLogin = New AxWMPLib.AxWindowsMediaPlayer()
         Me.pbMinimize = New System.Windows.Forms.PictureBox()
@@ -31,8 +32,6 @@ Partial Class frmMain
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.pbText1 = New System.Windows.Forms.PictureBox()
         Me.lblUser = New System.Windows.Forms.Label()
-        Me.txtUser = New System.Windows.Forms.TextBox()
-        Me.txtPass = New System.Windows.Forms.TextBox()
         Me.lblPass = New System.Windows.Forms.Label()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.lblCut = New System.Windows.Forms.Label()
@@ -49,6 +48,13 @@ Partial Class frmMain
         Me.lbPath = New System.Windows.Forms.Label()
         Me.pbPath = New System.Windows.Forms.PictureBox()
         Me.txtPath = New System.Windows.Forms.TextBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.signTimer = New System.Windows.Forms.Timer(Me.components)
+        Me.lbVolume = New System.Windows.Forms.Label()
+        Me.pbVolume = New System.Windows.Forms.PictureBox()
+        Me.numVolume = New System.Windows.Forms.NumericUpDown()
+        Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
         CType(Me.wmpLogin, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbMinimize, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbOptions, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -62,6 +68,8 @@ Partial Class frmMain
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbDone, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbPath, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pbVolume, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.numVolume, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'wmpLogin
@@ -155,32 +163,9 @@ Partial Class frmMain
         Me.lblUser.ForeColor = System.Drawing.SystemColors.ActiveBorder
         Me.lblUser.Location = New System.Drawing.Point(1316, 192)
         Me.lblUser.Name = "lblUser"
-        Me.lblUser.Size = New System.Drawing.Size(64, 16)
+        Me.lblUser.Size = New System.Drawing.Size(56, 16)
         Me.lblUser.TabIndex = 16
-        Me.lblUser.Text = "Username"
-        '
-        'txtUser
-        '
-        Me.txtUser.BackColor = System.Drawing.Color.Black
-        Me.txtUser.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtUser.Font = New System.Drawing.Font("BeaufortforLOL-Bold", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtUser.ForeColor = System.Drawing.SystemColors.ActiveBorder
-        Me.txtUser.Location = New System.Drawing.Point(1326, 223)
-        Me.txtUser.Name = "txtUser"
-        Me.txtUser.Size = New System.Drawing.Size(213, 17)
-        Me.txtUser.TabIndex = 17
-        '
-        'txtPass
-        '
-        Me.txtPass.BackColor = System.Drawing.Color.Black
-        Me.txtPass.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtPass.Font = New System.Drawing.Font("Bauhaus 93", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtPass.ForeColor = System.Drawing.SystemColors.ActiveBorder
-        Me.txtPass.Location = New System.Drawing.Point(1326, 295)
-        Me.txtPass.Name = "txtPass"
-        Me.txtPass.PasswordChar = Global.Microsoft.VisualBasic.ChrW(183)
-        Me.txtPass.Size = New System.Drawing.Size(213, 19)
-        Me.txtPass.TabIndex = 20
+        Me.lblUser.Text = "Made by"
         '
         'lblPass
         '
@@ -190,9 +175,9 @@ Partial Class frmMain
         Me.lblPass.ForeColor = System.Drawing.SystemColors.ActiveBorder
         Me.lblPass.Location = New System.Drawing.Point(1316, 264)
         Me.lblPass.Name = "lblPass"
-        Me.lblPass.Size = New System.Drawing.Size(62, 16)
+        Me.lblPass.Size = New System.Drawing.Size(101, 16)
         Me.lblPass.TabIndex = 19
-        Me.lblPass.Text = "Password"
+        Me.lblPass.Text = "Login Screens by"
         '
         'PictureBox2
         '
@@ -233,7 +218,7 @@ Partial Class frmMain
         Me.pbSignIn.BackColor = System.Drawing.Color.Transparent
         Me.pbSignIn.BackgroundImage = Global.LeagueLoginScreen.My.Resources.Resources.SignInDisabled
         Me.pbSignIn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.pbSignIn.Location = New System.Drawing.Point(1319, 502)
+        Me.pbSignIn.Location = New System.Drawing.Point(1319, 490)
         Me.pbSignIn.Name = "pbSignIn"
         Me.pbSignIn.Size = New System.Drawing.Size(231, 34)
         Me.pbSignIn.TabIndex = 24
@@ -270,13 +255,12 @@ Partial Class frmMain
         'lblVaank
         '
         Me.lblVaank.ActiveLinkColor = System.Drawing.Color.Cyan
-        Me.lblVaank.AutoSize = True
         Me.lblVaank.BackColor = System.Drawing.Color.Transparent
         Me.lblVaank.Font = New System.Drawing.Font("BeaufortforLOL-Bold", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblVaank.LinkColor = System.Drawing.Color.FromArgb(CType(CType(20, Byte), Integer), CType(CType(145, Byte), Integer), CType(CType(180, Byte), Integer))
         Me.lblVaank.Location = New System.Drawing.Point(1316, 634)
         Me.lblVaank.Name = "lblVaank"
-        Me.lblVaank.Size = New System.Drawing.Size(255, 16)
+        Me.lblVaank.Size = New System.Drawing.Size(142, 41)
         Me.lblVaank.TabIndex = 27
         Me.lblVaank.TabStop = True
         Me.lblVaank.Text = "Check Vaank's channel for More Animations"
@@ -288,7 +272,7 @@ Partial Class frmMain
         Me.pbOptionsMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.pbOptionsMenu.Location = New System.Drawing.Point(618, 264)
         Me.pbOptionsMenu.Name = "pbOptionsMenu"
-        Me.pbOptionsMenu.Size = New System.Drawing.Size(368, 203)
+        Me.pbOptionsMenu.Size = New System.Drawing.Size(368, 241)
         Me.pbOptionsMenu.TabIndex = 28
         Me.pbOptionsMenu.TabStop = False
         Me.pbOptionsMenu.Visible = False
@@ -326,7 +310,7 @@ Partial Class frmMain
         Me.cbLogin.Font = New System.Drawing.Font("BeaufortforLOL-Bold", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cbLogin.ForeColor = System.Drawing.Color.DarkGray
         Me.cbLogin.FormattingEnabled = True
-        Me.cbLogin.Items.AddRange(New Object() {"Current", "Lillia", "Sett", "Aphelios", "Qiyana", "Lucian"})
+        Me.cbLogin.Items.AddRange(New Object() {"Current", "Lillia", "Sett", "Aphelios", "Qiyana", "Lucian", "Custom"})
         Me.cbLogin.Location = New System.Drawing.Point(669, 297)
         Me.cbLogin.Name = "cbLogin"
         Me.cbLogin.Size = New System.Drawing.Size(224, 24)
@@ -339,7 +323,7 @@ Partial Class frmMain
         Me.pbDone.BackgroundImage = Global.LeagueLoginScreen.My.Resources.Resources.DoneButton
         Me.pbDone.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.pbDone.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.pbDone.Location = New System.Drawing.Point(740, 425)
+        Me.pbDone.Location = New System.Drawing.Point(738, 460)
         Me.pbDone.Name = "pbDone"
         Me.pbDone.Size = New System.Drawing.Size(121, 39)
         Me.pbDone.TabIndex = 32
@@ -352,7 +336,7 @@ Partial Class frmMain
         Me.lbPath.BackColor = System.Drawing.Color.Transparent
         Me.lbPath.Font = New System.Drawing.Font("BeaufortforLOL-Bold", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbPath.ForeColor = System.Drawing.SystemColors.ActiveBorder
-        Me.lbPath.Location = New System.Drawing.Point(663, 340)
+        Me.lbPath.Location = New System.Drawing.Point(663, 338)
         Me.lbPath.Name = "lbPath"
         Me.lbPath.Size = New System.Drawing.Size(74, 16)
         Me.lbPath.TabIndex = 34
@@ -364,7 +348,7 @@ Partial Class frmMain
         Me.pbPath.BackColor = System.Drawing.Color.Transparent
         Me.pbPath.BackgroundImage = Global.LeagueLoginScreen.My.Resources.Resources.TextBox
         Me.pbPath.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.pbPath.Location = New System.Drawing.Point(666, 359)
+        Me.pbPath.Location = New System.Drawing.Point(666, 357)
         Me.pbPath.Name = "pbPath"
         Me.pbPath.Size = New System.Drawing.Size(231, 28)
         Me.pbPath.TabIndex = 33
@@ -377,11 +361,90 @@ Partial Class frmMain
         Me.txtPath.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtPath.Font = New System.Drawing.Font("BeaufortforLOL-Bold", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtPath.ForeColor = System.Drawing.SystemColors.ActiveBorder
-        Me.txtPath.Location = New System.Drawing.Point(669, 363)
+        Me.txtPath.Location = New System.Drawing.Point(669, 361)
         Me.txtPath.Name = "txtPath"
         Me.txtPath.Size = New System.Drawing.Size(224, 17)
         Me.txtPath.TabIndex = 35
         Me.txtPath.Visible = False
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
+        Me.Label1.Font = New System.Drawing.Font("BeaufortforLOL-Bold", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.SystemColors.ActiveBorder
+        Me.Label1.Location = New System.Drawing.Point(1326, 222)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(73, 16)
+        Me.Label1.TabIndex = 36
+        Me.Label1.Text = "Nachsacred"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.BackColor = System.Drawing.Color.Transparent
+        Me.Label2.Font = New System.Drawing.Font("BeaufortforLOL-Bold", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.SystemColors.ActiveBorder
+        Me.Label2.Location = New System.Drawing.Point(1326, 294)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(45, 16)
+        Me.Label2.TabIndex = 37
+        Me.Label2.Text = "Vaank"
+        '
+        'signTimer
+        '
+        Me.signTimer.Interval = 3000
+        '
+        'lbVolume
+        '
+        Me.lbVolume.AutoSize = True
+        Me.lbVolume.BackColor = System.Drawing.Color.Transparent
+        Me.lbVolume.Font = New System.Drawing.Font("BeaufortforLOL-Bold", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbVolume.ForeColor = System.Drawing.SystemColors.ActiveBorder
+        Me.lbVolume.Location = New System.Drawing.Point(663, 398)
+        Me.lbVolume.Name = "lbVolume"
+        Me.lbVolume.Size = New System.Drawing.Size(53, 16)
+        Me.lbVolume.TabIndex = 39
+        Me.lbVolume.Text = "Volume:"
+        Me.lbVolume.Visible = False
+        '
+        'pbVolume
+        '
+        Me.pbVolume.BackColor = System.Drawing.Color.Transparent
+        Me.pbVolume.BackgroundImage = Global.LeagueLoginScreen.My.Resources.Resources.TextBox
+        Me.pbVolume.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.pbVolume.Location = New System.Drawing.Point(666, 417)
+        Me.pbVolume.Name = "pbVolume"
+        Me.pbVolume.Size = New System.Drawing.Size(53, 28)
+        Me.pbVolume.TabIndex = 38
+        Me.pbVolume.TabStop = False
+        Me.pbVolume.Visible = False
+        '
+        'numVolume
+        '
+        Me.numVolume.BackColor = System.Drawing.SystemColors.ControlText
+        Me.numVolume.Font = New System.Drawing.Font("BeaufortforLOL-Bold", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.numVolume.ForeColor = System.Drawing.Color.DarkGray
+        Me.numVolume.Location = New System.Drawing.Point(668, 419)
+        Me.numVolume.Name = "numVolume"
+        Me.numVolume.Size = New System.Drawing.Size(48, 24)
+        Me.numVolume.TabIndex = 40
+        Me.numVolume.Value = New Decimal(New Integer() {50, 0, 0, 0})
+        Me.numVolume.Visible = False
+        '
+        'LinkLabel1
+        '
+        Me.LinkLabel1.ActiveLinkColor = System.Drawing.Color.Cyan
+        Me.LinkLabel1.AutoSize = True
+        Me.LinkLabel1.BackColor = System.Drawing.Color.Transparent
+        Me.LinkLabel1.Font = New System.Drawing.Font("BeaufortforLOL-Bold", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LinkLabel1.LinkColor = System.Drawing.Color.FromArgb(CType(CType(20, Byte), Integer), CType(CType(145, Byte), Integer), CType(CType(180, Byte), Integer))
+        Me.LinkLabel1.Location = New System.Drawing.Point(1316, 558)
+        Me.LinkLabel1.Name = "LinkLabel1"
+        Me.LinkLabel1.Size = New System.Drawing.Size(152, 16)
+        Me.LinkLabel1.TabIndex = 41
+        Me.LinkLabel1.TabStop = True
+        Me.LinkLabel1.Text = "Check Github for Updates"
         '
         'frmMain
         '
@@ -391,6 +454,12 @@ Partial Class frmMain
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.ClientSize = New System.Drawing.Size(1576, 731)
         Me.ControlBox = False
+        Me.Controls.Add(Me.LinkLabel1)
+        Me.Controls.Add(Me.numVolume)
+        Me.Controls.Add(Me.lbVolume)
+        Me.Controls.Add(Me.pbVolume)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.txtPath)
         Me.Controls.Add(Me.lbPath)
         Me.Controls.Add(Me.pbPath)
@@ -404,10 +473,8 @@ Partial Class frmMain
         Me.Controls.Add(Me.lblSignIn)
         Me.Controls.Add(Me.pbSignIn)
         Me.Controls.Add(Me.lblPatch)
-        Me.Controls.Add(Me.txtPass)
         Me.Controls.Add(Me.lblPass)
         Me.Controls.Add(Me.PictureBox2)
-        Me.Controls.Add(Me.txtUser)
         Me.Controls.Add(Me.lblUser)
         Me.Controls.Add(Me.pbText1)
         Me.Controls.Add(Me.PictureBox1)
@@ -421,7 +488,7 @@ Partial Class frmMain
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmMain"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Form1"
+        Me.Text = "League of Legends"
         CType(Me.wmpLogin, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pbMinimize, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pbOptions, System.ComponentModel.ISupportInitialize).EndInit()
@@ -435,6 +502,8 @@ Partial Class frmMain
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pbDone, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pbPath, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pbVolume, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.numVolume, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -448,8 +517,6 @@ Partial Class frmMain
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents pbText1 As PictureBox
     Friend WithEvents lblUser As Label
-    Friend WithEvents txtUser As TextBox
-    Friend WithEvents txtPass As TextBox
     Friend WithEvents lblPass As Label
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents lblCut As Label
@@ -466,4 +533,11 @@ Partial Class frmMain
     Friend WithEvents lbPath As Label
     Friend WithEvents pbPath As PictureBox
     Friend WithEvents txtPath As TextBox
+    Friend WithEvents Label1 As Label
+    Friend WithEvents Label2 As Label
+    Friend WithEvents signTimer As Timer
+    Friend WithEvents lbVolume As Label
+    Friend WithEvents pbVolume As PictureBox
+    Friend WithEvents numVolume As NumericUpDown
+    Friend WithEvents LinkLabel1 As LinkLabel
 End Class

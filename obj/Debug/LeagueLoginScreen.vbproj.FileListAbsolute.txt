@@ -15,3 +15,20 @@ C:\Users\ignir\Desktop\Escritorio\LeagueLoginScreen\LeagueLoginScreen\obj\Debug\
 C:\Users\ignir\Desktop\Escritorio\LeagueLoginScreen\LeagueLoginScreen\obj\Debug\LeagueLoginScreen.frmMain.resources
 C:\Users\ignir\Desktop\Escritorio\LeagueLoginScreen\LeagueLoginScreen\bin\Debug\Interop.WMPLib.dll
 C:\Users\ignir\Desktop\Escritorio\LeagueLoginScreen\LeagueLoginScreen\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\ignir\Desktop\Git Login\LeagueLoginScreen\bin\Debug\LeagueLoginScreen.exe.config
+C:\Users\ignir\Desktop\Git Login\LeagueLoginScreen\bin\Debug\LeagueLoginScreen.exe
+C:\Users\ignir\Desktop\Git Login\LeagueLoginScreen\bin\Debug\LeagueLoginScreen.pdb
+C:\Users\ignir\Desktop\Git Login\LeagueLoginScreen\bin\Debug\LeagueLoginScreen.xml
+C:\Users\ignir\Desktop\Git Login\LeagueLoginScreen\bin\Debug\Interop.WMPLib.dll
+C:\Users\ignir\Desktop\Git Login\LeagueLoginScreen\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\ignir\Desktop\Git Login\LeagueLoginScreen\obj\Debug\LeagueLoginScreen.vbprojAssemblyReference.cache
+C:\Users\ignir\Desktop\Git Login\LeagueLoginScreen\obj\Debug\Interop.WMPLib.dll
+C:\Users\ignir\Desktop\Git Login\LeagueLoginScreen\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\ignir\Desktop\Git Login\LeagueLoginScreen\obj\Debug\LeagueLoginScreen.vbproj.ResolveComReference.cache
+C:\Users\ignir\Desktop\Git Login\LeagueLoginScreen\obj\Debug\LeagueLoginScreen.frmMain.resources
+C:\Users\ignir\Desktop\Git Login\LeagueLoginScreen\obj\Debug\LeagueLoginScreen.Resources.resources
+C:\Users\ignir\Desktop\Git Login\LeagueLoginScreen\obj\Debug\LeagueLoginScreen.vbproj.GenerateResource.cache
+C:\Users\ignir\Desktop\Git Login\LeagueLoginScreen\obj\Debug\LeagueLoginScreen.vbproj.CoreCompileInputs.cache
+C:\Users\ignir\Desktop\Git Login\LeagueLoginScreen\obj\Debug\LeagueLoginScreen.exe
+C:\Users\ignir\Desktop\Git Login\LeagueLoginScreen\obj\Debug\LeagueLoginScreen.xml
+C:\Users\ignir\Desktop\Git Login\LeagueLoginScreen\obj\Debug\LeagueLoginScreen.pdb
