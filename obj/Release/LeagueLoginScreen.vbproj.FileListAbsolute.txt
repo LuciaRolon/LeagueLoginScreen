@@ -1,0 +1,17 @@
+C:\Users\ignir\Desktop\Escritorio\LeagueLoginScreen\LeagueLoginScreen\bin\Release\LeagueLoginScreen.exe.config
+C:\Users\ignir\Desktop\Escritorio\LeagueLoginScreen\LeagueLoginScreen\bin\Release\LeagueLoginScreen.exe
+C:\Users\ignir\Desktop\Escritorio\LeagueLoginScreen\LeagueLoginScreen\bin\Release\LeagueLoginScreen.pdb
+C:\Users\ignir\Desktop\Escritorio\LeagueLoginScreen\LeagueLoginScreen\bin\Release\LeagueLoginScreen.xml
+C:\Users\ignir\Desktop\Escritorio\LeagueLoginScreen\LeagueLoginScreen\bin\Release\Interop.WMPLib.dll
+C:\Users\ignir\Desktop\Escritorio\LeagueLoginScreen\LeagueLoginScreen\bin\Release\AxInterop.WMPLib.dll
+C:\Users\ignir\Desktop\Escritorio\LeagueLoginScreen\LeagueLoginScreen\obj\Release\LeagueLoginScreen.vbprojAssemblyReference.cache
+C:\Users\ignir\Desktop\Escritorio\LeagueLoginScreen\LeagueLoginScreen\obj\Release\Interop.WMPLib.dll
+C:\Users\ignir\Desktop\Escritorio\LeagueLoginScreen\LeagueLoginScreen\obj\Release\AxInterop.WMPLib.dll
+C:\Users\ignir\Desktop\Escritorio\LeagueLoginScreen\LeagueLoginScreen\obj\Release\LeagueLoginScreen.vbproj.ResolveComReference.cache
+C:\Users\ignir\Desktop\Escritorio\LeagueLoginScreen\LeagueLoginScreen\obj\Release\LeagueLoginScreen.frmMain.resources
+C:\Users\ignir\Desktop\Escritorio\LeagueLoginScreen\LeagueLoginScreen\obj\Release\LeagueLoginScreen.Resources.resources
+C:\Users\ignir\Desktop\Escritorio\LeagueLoginScreen\LeagueLoginScreen\obj\Release\LeagueLoginScreen.vbproj.GenerateResource.cache
+C:\Users\ignir\Desktop\Escritorio\LeagueLoginScreen\LeagueLoginScreen\obj\Release\LeagueLoginScreen.vbproj.CoreCompileInputs.cache
+C:\Users\ignir\Desktop\Escritorio\LeagueLoginScreen\LeagueLoginScreen\obj\Release\LeagueLoginScreen.exe
+C:\Users\ignir\Desktop\Escritorio\LeagueLoginScreen\LeagueLoginScreen\obj\Release\LeagueLoginScreen.xml
+C:\Users\ignir\Desktop\Escritorio\LeagueLoginScreen\LeagueLoginScreen\obj\Release\LeagueLoginScreen.pdb
