@@ -55,6 +55,13 @@ Partial Class frmMain
         Me.pbVolume = New System.Windows.Forms.PictureBox()
         Me.numVolume = New System.Windows.Forms.NumericUpDown()
         Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
+        Me.cbLanguage = New System.Windows.Forms.ComboBox()
+        Me.lblLanguage = New System.Windows.Forms.Label()
+        Me.pbLanguage = New System.Windows.Forms.PictureBox()
+        Me.pbSize = New System.Windows.Forms.PictureBox()
+        Me.cbSize = New System.Windows.Forms.ComboBox()
+        Me.lblSize = New System.Windows.Forms.Label()
+        Me.panMove = New System.Windows.Forms.Panel()
         CType(Me.wmpLogin, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbMinimize, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbOptions, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -70,11 +77,15 @@ Partial Class frmMain
         CType(Me.pbPath, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pbVolume, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.numVolume, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pbLanguage, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pbSize, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'wmpLogin
         '
-        Me.wmpLogin.Dock = System.Windows.Forms.DockStyle.Left
+        Me.wmpLogin.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.wmpLogin.Enabled = True
         Me.wmpLogin.Location = New System.Drawing.Point(0, 0)
         Me.wmpLogin.Name = "wmpLogin"
@@ -98,6 +109,7 @@ Partial Class frmMain
         '
         'pbOptions
         '
+        Me.pbOptions.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.pbOptions.BackColor = System.Drawing.Color.Transparent
         Me.pbOptions.BackgroundImage = Global.LeagueLoginScreen.My.Resources.Resources.OptionsDisabled
         Me.pbOptions.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
@@ -111,6 +123,7 @@ Partial Class frmMain
         '
         'pbClose
         '
+        Me.pbClose.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.pbClose.BackColor = System.Drawing.Color.Transparent
         Me.pbClose.BackgroundImage = Global.LeagueLoginScreen.My.Resources.Resources.CloseDisabled
         Me.pbClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
@@ -124,6 +137,7 @@ Partial Class frmMain
         '
         'pbLogo
         '
+        Me.pbLogo.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.pbLogo.BackColor = System.Drawing.Color.Transparent
         Me.pbLogo.BackgroundImage = Global.LeagueLoginScreen.My.Resources.Resources.Logo
         Me.pbLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
@@ -135,6 +149,7 @@ Partial Class frmMain
         '
         'PictureBox1
         '
+        Me.PictureBox1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox1.BackgroundImage = Global.LeagueLoginScreen.My.Resources.Resources.Sign_IN
         Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
@@ -146,6 +161,7 @@ Partial Class frmMain
         '
         'pbText1
         '
+        Me.pbText1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.pbText1.BackColor = System.Drawing.Color.Transparent
         Me.pbText1.BackgroundImage = Global.LeagueLoginScreen.My.Resources.Resources.TextBox
         Me.pbText1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
@@ -157,6 +173,7 @@ Partial Class frmMain
         '
         'lblUser
         '
+        Me.lblUser.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.lblUser.AutoSize = True
         Me.lblUser.BackColor = System.Drawing.Color.Transparent
         Me.lblUser.Font = New System.Drawing.Font("BeaufortforLOL-Bold", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -169,6 +186,7 @@ Partial Class frmMain
         '
         'lblPass
         '
+        Me.lblPass.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.lblPass.AutoSize = True
         Me.lblPass.BackColor = System.Drawing.Color.Transparent
         Me.lblPass.Font = New System.Drawing.Font("BeaufortforLOL-Bold", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -181,6 +199,7 @@ Partial Class frmMain
         '
         'PictureBox2
         '
+        Me.PictureBox2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.PictureBox2.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox2.BackgroundImage = Global.LeagueLoginScreen.My.Resources.Resources.TextBox
         Me.PictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
@@ -192,6 +211,7 @@ Partial Class frmMain
         '
         'lblCut
         '
+        Me.lblCut.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.lblCut.AutoSize = True
         Me.lblCut.BackColor = System.Drawing.Color.Transparent
         Me.lblCut.ForeColor = System.Drawing.Color.DimGray
@@ -203,6 +223,7 @@ Partial Class frmMain
         '
         'lblPatch
         '
+        Me.lblPatch.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.lblPatch.AutoSize = True
         Me.lblPatch.BackColor = System.Drawing.Color.Transparent
         Me.lblPatch.Font = New System.Drawing.Font("BeaufortforLOL-Bold", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -211,10 +232,11 @@ Partial Class frmMain
         Me.lblPatch.Name = "lblPatch"
         Me.lblPatch.Size = New System.Drawing.Size(73, 24)
         Me.lblPatch.TabIndex = 23
-        Me.lblPatch.Text = "V10.16"
+        Me.lblPatch.Text = "V10.18"
         '
         'pbSignIn
         '
+        Me.pbSignIn.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.pbSignIn.BackColor = System.Drawing.Color.Transparent
         Me.pbSignIn.BackgroundImage = Global.LeagueLoginScreen.My.Resources.Resources.SignInDisabled
         Me.pbSignIn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
@@ -227,6 +249,7 @@ Partial Class frmMain
         'lblSignIn
         '
         Me.lblSignIn.ActiveLinkColor = System.Drawing.Color.Cyan
+        Me.lblSignIn.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.lblSignIn.AutoSize = True
         Me.lblSignIn.BackColor = System.Drawing.Color.Transparent
         Me.lblSignIn.Font = New System.Drawing.Font("BeaufortforLOL-Bold", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -241,6 +264,7 @@ Partial Class frmMain
         'lblCreate
         '
         Me.lblCreate.ActiveLinkColor = System.Drawing.Color.Cyan
+        Me.lblCreate.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.lblCreate.AutoSize = True
         Me.lblCreate.BackColor = System.Drawing.Color.Transparent
         Me.lblCreate.Font = New System.Drawing.Font("BeaufortforLOL-Bold", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -255,6 +279,7 @@ Partial Class frmMain
         'lblVaank
         '
         Me.lblVaank.ActiveLinkColor = System.Drawing.Color.Cyan
+        Me.lblVaank.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.lblVaank.BackColor = System.Drawing.Color.Transparent
         Me.lblVaank.Font = New System.Drawing.Font("BeaufortforLOL-Bold", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblVaank.LinkColor = System.Drawing.Color.FromArgb(CType(CType(20, Byte), Integer), CType(CType(145, Byte), Integer), CType(CType(180, Byte), Integer))
@@ -270,20 +295,23 @@ Partial Class frmMain
         Me.pbOptionsMenu.BackColor = System.Drawing.Color.Transparent
         Me.pbOptionsMenu.BackgroundImage = Global.LeagueLoginScreen.My.Resources.Resources.OptionsMenu
         Me.pbOptionsMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.pbOptionsMenu.Location = New System.Drawing.Point(618, 264)
+        Me.pbOptionsMenu.Location = New System.Drawing.Point(618, 237)
         Me.pbOptionsMenu.Name = "pbOptionsMenu"
-        Me.pbOptionsMenu.Size = New System.Drawing.Size(368, 241)
+        Me.pbOptionsMenu.Size = New System.Drawing.Size(368, 362)
         Me.pbOptionsMenu.TabIndex = 28
         Me.pbOptionsMenu.TabStop = False
         Me.pbOptionsMenu.Visible = False
         '
         'lbLoginSelection
         '
+        Me.lbLoginSelection.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.lbLoginSelection.AutoSize = True
         Me.lbLoginSelection.BackColor = System.Drawing.Color.Transparent
         Me.lbLoginSelection.Font = New System.Drawing.Font("BeaufortforLOL-Bold", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbLoginSelection.ForeColor = System.Drawing.SystemColors.ActiveBorder
-        Me.lbLoginSelection.Location = New System.Drawing.Point(663, 276)
+        Me.lbLoginSelection.Location = New System.Drawing.Point(663, 251)
         Me.lbLoginSelection.Name = "lbLoginSelection"
         Me.lbLoginSelection.Size = New System.Drawing.Size(82, 16)
         Me.lbLoginSelection.TabIndex = 30
@@ -295,7 +323,7 @@ Partial Class frmMain
         Me.PictureBox3.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox3.BackgroundImage = Global.LeagueLoginScreen.My.Resources.Resources.TextBox
         Me.PictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox3.Location = New System.Drawing.Point(666, 295)
+        Me.PictureBox3.Location = New System.Drawing.Point(666, 270)
         Me.PictureBox3.Name = "PictureBox3"
         Me.PictureBox3.Size = New System.Drawing.Size(231, 28)
         Me.PictureBox3.TabIndex = 29
@@ -304,14 +332,17 @@ Partial Class frmMain
         '
         'cbLogin
         '
+        Me.cbLogin.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.cbLogin.BackColor = System.Drawing.SystemColors.ControlText
         Me.cbLogin.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.cbLogin.Font = New System.Drawing.Font("BeaufortforLOL-Bold", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cbLogin.ForeColor = System.Drawing.Color.DarkGray
         Me.cbLogin.FormattingEnabled = True
-        Me.cbLogin.Items.AddRange(New Object() {"Current", "Lillia", "Sett", "Aphelios", "Qiyana", "Lucian", "Custom"})
-        Me.cbLogin.Location = New System.Drawing.Point(669, 297)
+        Me.cbLogin.Items.AddRange(New Object() {"Current", "PsyOps", "Yone", "Lillia", "Sett", "Aphelios", "Qiyana", "Lucian", "Custom"})
+        Me.cbLogin.Location = New System.Drawing.Point(669, 272)
         Me.cbLogin.Name = "cbLogin"
         Me.cbLogin.Size = New System.Drawing.Size(224, 24)
         Me.cbLogin.TabIndex = 31
@@ -323,7 +354,7 @@ Partial Class frmMain
         Me.pbDone.BackgroundImage = Global.LeagueLoginScreen.My.Resources.Resources.DoneButton
         Me.pbDone.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.pbDone.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.pbDone.Location = New System.Drawing.Point(738, 460)
+        Me.pbDone.Location = New System.Drawing.Point(738, 556)
         Me.pbDone.Name = "pbDone"
         Me.pbDone.Size = New System.Drawing.Size(121, 39)
         Me.pbDone.TabIndex = 32
@@ -336,7 +367,7 @@ Partial Class frmMain
         Me.lbPath.BackColor = System.Drawing.Color.Transparent
         Me.lbPath.Font = New System.Drawing.Font("BeaufortforLOL-Bold", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbPath.ForeColor = System.Drawing.SystemColors.ActiveBorder
-        Me.lbPath.Location = New System.Drawing.Point(663, 338)
+        Me.lbPath.Location = New System.Drawing.Point(663, 313)
         Me.lbPath.Name = "lbPath"
         Me.lbPath.Size = New System.Drawing.Size(74, 16)
         Me.lbPath.TabIndex = 34
@@ -348,7 +379,7 @@ Partial Class frmMain
         Me.pbPath.BackColor = System.Drawing.Color.Transparent
         Me.pbPath.BackgroundImage = Global.LeagueLoginScreen.My.Resources.Resources.TextBox
         Me.pbPath.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.pbPath.Location = New System.Drawing.Point(666, 357)
+        Me.pbPath.Location = New System.Drawing.Point(666, 332)
         Me.pbPath.Name = "pbPath"
         Me.pbPath.Size = New System.Drawing.Size(231, 28)
         Me.pbPath.TabIndex = 33
@@ -357,11 +388,14 @@ Partial Class frmMain
         '
         'txtPath
         '
+        Me.txtPath.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.txtPath.BackColor = System.Drawing.Color.Black
         Me.txtPath.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtPath.Font = New System.Drawing.Font("BeaufortforLOL-Bold", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtPath.ForeColor = System.Drawing.SystemColors.ActiveBorder
-        Me.txtPath.Location = New System.Drawing.Point(669, 361)
+        Me.txtPath.Location = New System.Drawing.Point(669, 336)
         Me.txtPath.Name = "txtPath"
         Me.txtPath.Size = New System.Drawing.Size(224, 17)
         Me.txtPath.TabIndex = 35
@@ -369,6 +403,7 @@ Partial Class frmMain
         '
         'Label1
         '
+        Me.Label1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label1.AutoSize = True
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("BeaufortforLOL-Bold", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -381,6 +416,7 @@ Partial Class frmMain
         '
         'Label2
         '
+        Me.Label2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label2.AutoSize = True
         Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Font = New System.Drawing.Font("BeaufortforLOL-Bold", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -401,7 +437,7 @@ Partial Class frmMain
         Me.lbVolume.BackColor = System.Drawing.Color.Transparent
         Me.lbVolume.Font = New System.Drawing.Font("BeaufortforLOL-Bold", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbVolume.ForeColor = System.Drawing.SystemColors.ActiveBorder
-        Me.lbVolume.Location = New System.Drawing.Point(663, 398)
+        Me.lbVolume.Location = New System.Drawing.Point(663, 372)
         Me.lbVolume.Name = "lbVolume"
         Me.lbVolume.Size = New System.Drawing.Size(53, 16)
         Me.lbVolume.TabIndex = 39
@@ -413,7 +449,7 @@ Partial Class frmMain
         Me.pbVolume.BackColor = System.Drawing.Color.Transparent
         Me.pbVolume.BackgroundImage = Global.LeagueLoginScreen.My.Resources.Resources.TextBox
         Me.pbVolume.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.pbVolume.Location = New System.Drawing.Point(666, 417)
+        Me.pbVolume.Location = New System.Drawing.Point(666, 392)
         Me.pbVolume.Name = "pbVolume"
         Me.pbVolume.Size = New System.Drawing.Size(53, 28)
         Me.pbVolume.TabIndex = 38
@@ -425,7 +461,7 @@ Partial Class frmMain
         Me.numVolume.BackColor = System.Drawing.SystemColors.ControlText
         Me.numVolume.Font = New System.Drawing.Font("BeaufortforLOL-Bold", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.numVolume.ForeColor = System.Drawing.Color.DarkGray
-        Me.numVolume.Location = New System.Drawing.Point(668, 419)
+        Me.numVolume.Location = New System.Drawing.Point(668, 394)
         Me.numVolume.Name = "numVolume"
         Me.numVolume.Size = New System.Drawing.Size(48, 24)
         Me.numVolume.TabIndex = 40
@@ -435,6 +471,7 @@ Partial Class frmMain
         'LinkLabel1
         '
         Me.LinkLabel1.ActiveLinkColor = System.Drawing.Color.Cyan
+        Me.LinkLabel1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.LinkLabel1.AutoSize = True
         Me.LinkLabel1.BackColor = System.Drawing.Color.Transparent
         Me.LinkLabel1.Font = New System.Drawing.Font("BeaufortforLOL-Bold", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -446,6 +483,94 @@ Partial Class frmMain
         Me.LinkLabel1.TabStop = True
         Me.LinkLabel1.Text = "Check Github for Updates"
         '
+        'cbLanguage
+        '
+        Me.cbLanguage.BackColor = System.Drawing.SystemColors.ControlText
+        Me.cbLanguage.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cbLanguage.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.cbLanguage.Font = New System.Drawing.Font("BeaufortforLOL-Bold", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cbLanguage.ForeColor = System.Drawing.Color.DarkGray
+        Me.cbLanguage.FormattingEnabled = True
+        Me.cbLanguage.Items.AddRange(New Object() {"English (US)", "English (UK)", "Czech", "French", "German", "Greek", "Italian", "Japanese", "Polish", "Portuguese", "Russian", "Spanish (Spain)", "Spanish (Latin America)", "Turkish"})
+        Me.cbLanguage.Location = New System.Drawing.Point(669, 453)
+        Me.cbLanguage.Name = "cbLanguage"
+        Me.cbLanguage.Size = New System.Drawing.Size(224, 24)
+        Me.cbLanguage.TabIndex = 44
+        Me.cbLanguage.Visible = False
+        '
+        'lblLanguage
+        '
+        Me.lblLanguage.AutoSize = True
+        Me.lblLanguage.BackColor = System.Drawing.Color.Transparent
+        Me.lblLanguage.Font = New System.Drawing.Font("BeaufortforLOL-Bold", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblLanguage.ForeColor = System.Drawing.SystemColors.ActiveBorder
+        Me.lblLanguage.Location = New System.Drawing.Point(663, 432)
+        Me.lblLanguage.Name = "lblLanguage"
+        Me.lblLanguage.Size = New System.Drawing.Size(102, 16)
+        Me.lblLanguage.TabIndex = 43
+        Me.lblLanguage.Text = "Game Language:"
+        Me.lblLanguage.Visible = False
+        '
+        'pbLanguage
+        '
+        Me.pbLanguage.BackColor = System.Drawing.Color.Transparent
+        Me.pbLanguage.BackgroundImage = Global.LeagueLoginScreen.My.Resources.Resources.TextBox
+        Me.pbLanguage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.pbLanguage.Location = New System.Drawing.Point(666, 451)
+        Me.pbLanguage.Name = "pbLanguage"
+        Me.pbLanguage.Size = New System.Drawing.Size(231, 28)
+        Me.pbLanguage.TabIndex = 42
+        Me.pbLanguage.TabStop = False
+        Me.pbLanguage.Visible = False
+        '
+        'pbSize
+        '
+        Me.pbSize.BackColor = System.Drawing.Color.Transparent
+        Me.pbSize.BackgroundImage = Global.LeagueLoginScreen.My.Resources.Resources.TextBox
+        Me.pbSize.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.pbSize.Location = New System.Drawing.Point(666, 507)
+        Me.pbSize.Name = "pbSize"
+        Me.pbSize.Size = New System.Drawing.Size(231, 28)
+        Me.pbSize.TabIndex = 45
+        Me.pbSize.TabStop = False
+        Me.pbSize.Visible = False
+        '
+        'cbSize
+        '
+        Me.cbSize.BackColor = System.Drawing.SystemColors.ControlText
+        Me.cbSize.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cbSize.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.cbSize.Font = New System.Drawing.Font("BeaufortforLOL-Bold", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cbSize.ForeColor = System.Drawing.Color.DarkGray
+        Me.cbSize.FormattingEnabled = True
+        Me.cbSize.Items.AddRange(New Object() {"Normal", "Small"})
+        Me.cbSize.Location = New System.Drawing.Point(669, 509)
+        Me.cbSize.Name = "cbSize"
+        Me.cbSize.Size = New System.Drawing.Size(224, 24)
+        Me.cbSize.TabIndex = 47
+        Me.cbSize.Visible = False
+        '
+        'lblSize
+        '
+        Me.lblSize.AutoSize = True
+        Me.lblSize.BackColor = System.Drawing.Color.Transparent
+        Me.lblSize.Font = New System.Drawing.Font("BeaufortforLOL-Bold", 9.749999!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblSize.ForeColor = System.Drawing.SystemColors.ActiveBorder
+        Me.lblSize.Location = New System.Drawing.Point(663, 488)
+        Me.lblSize.Name = "lblSize"
+        Me.lblSize.Size = New System.Drawing.Size(83, 16)
+        Me.lblSize.TabIndex = 46
+        Me.lblSize.Text = "Window Size:"
+        Me.lblSize.Visible = False
+        '
+        'panMove
+        '
+        Me.panMove.BackColor = System.Drawing.Color.Transparent
+        Me.panMove.Location = New System.Drawing.Point(1257, 2)
+        Me.panMove.Name = "panMove"
+        Me.panMove.Size = New System.Drawing.Size(321, 26)
+        Me.panMove.TabIndex = 48
+        '
         'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -454,6 +579,12 @@ Partial Class frmMain
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.ClientSize = New System.Drawing.Size(1576, 731)
         Me.ControlBox = False
+        Me.Controls.Add(Me.cbSize)
+        Me.Controls.Add(Me.lblSize)
+        Me.Controls.Add(Me.pbSize)
+        Me.Controls.Add(Me.cbLanguage)
+        Me.Controls.Add(Me.lblLanguage)
+        Me.Controls.Add(Me.pbLanguage)
         Me.Controls.Add(Me.LinkLabel1)
         Me.Controls.Add(Me.numVolume)
         Me.Controls.Add(Me.lbVolume)
@@ -484,6 +615,7 @@ Partial Class frmMain
         Me.Controls.Add(Me.pbMinimize)
         Me.Controls.Add(Me.wmpLogin)
         Me.Controls.Add(Me.lblCut)
+        Me.Controls.Add(Me.panMove)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmMain"
@@ -504,6 +636,8 @@ Partial Class frmMain
         CType(Me.pbPath, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pbVolume, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.numVolume, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pbLanguage, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pbSize, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -540,4 +674,11 @@ Partial Class frmMain
     Friend WithEvents pbVolume As PictureBox
     Friend WithEvents numVolume As NumericUpDown
     Friend WithEvents LinkLabel1 As LinkLabel
+    Friend WithEvents cbLanguage As ComboBox
+    Friend WithEvents lblLanguage As Label
+    Friend WithEvents pbLanguage As PictureBox
+    Friend WithEvents pbSize As PictureBox
+    Friend WithEvents cbSize As ComboBox
+    Friend WithEvents lblSize As Label
+    Friend WithEvents panMove As Panel
 End Class

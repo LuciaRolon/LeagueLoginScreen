@@ -32,3 +32,4 @@ C:\Users\ignir\Desktop\Git Login\LeagueLoginScreen\obj\Debug\LeagueLoginScreen.v
 C:\Users\ignir\Desktop\Git Login\LeagueLoginScreen\obj\Debug\LeagueLoginScreen.exe
 C:\Users\ignir\Desktop\Git Login\LeagueLoginScreen\obj\Debug\LeagueLoginScreen.xml
 C:\Users\ignir\Desktop\Git Login\LeagueLoginScreen\obj\Debug\LeagueLoginScreen.pdb
+C:\Users\ignir\Desktop\Git Login\LeagueLoginScreen\obj\Debug\LeagueLoginScreen.frmMainSmall.resources
